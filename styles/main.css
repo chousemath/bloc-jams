@@ -59,8 +59,13 @@ body {
   cursor: pointer;
 }
 
-.links-container .navbar-link:hover {
+.links-container .navbar-lin:hover {
   color: rgb(233, 50, 117);
+}
+
+.link-container .navbar-link:active {
+  color: rgb(233,50,117);
+  background-color: blue;
 }
 
 /*medium sized screens*/
