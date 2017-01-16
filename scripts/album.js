@@ -28,6 +28,21 @@ var albumMarconi = {
   ]
 };
 
+var albumRandom = {
+  title: 'ffffff',
+  artist: 'aaaaaa',
+  label: 'bbbbb',
+  year: '222222',
+  albumArtUrl: 'assets/images/album_covers/03.png',
+  songs: [
+    {title: 'aaaaaa', duration: '4:11'},
+    {title: 'bbbbbb', duration: '4:22'},
+    {title: 'cccccc', duration: '4:33'},
+    {title: 'dddddd', duration: '4:44'},
+    {title: 'eeeeee', duration: '4:55'},
+  ]
+};
+
 var createSongRow = function(songNumber, songName, songLength) {
   var template =
       '<tr class="album-view-song-item">' +
@@ -60,4 +75,15 @@ var setCurrentAlbum = function(album) {
 
 window.onload = function() {
   setCurrentAlbum(albumPicasso);
+};
+
+var toggleIndex = 0;
+var toggleAlbum = function() {
+  if (toggleIndex === 3) {
+    toggleIndex = 0;
+  }
+  if (toggleIndex === 0) {setCurrentAlbum(albumPicasso);}
+  if (toggleIndex === 1) {setCurrentAlbum(albumMarconi);}
+  if (toggleIndex === 2) {setCurrentAlbum(albumRandom);}
+  toggleIndex++;
 };
